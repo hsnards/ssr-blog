@@ -6,7 +6,7 @@ import MyCard from './../components/MyCard';
 import NotFound from './../components/NotFound';
 
 
-const index = ({ posts }) => {
+const Index = ({ posts }) => {
      const router = useRouter()
      useEffect(() => {
           router.push("/posts")
@@ -44,7 +44,7 @@ const index = ({ posts }) => {
      );
 };
 
-export default index;
+export default Index;
 export async function getServerSideProps({query}) {
      let posts;
      console.log(query);

@@ -1,7 +1,7 @@
 import { fetchData } from '../../utils/fetchData';
 import { BaseURL } from '../../utils/BaseURL';
 import Image from 'next/image';
-const internal = ({ data, user, photo }) => {
+const Internal = ({ data, user, photo }) => {
      return (
           <>
                <div className="flex flex-col max-w-[600px] mx-auto  shadow rounded-md px-4 py-4 ">
@@ -31,7 +31,7 @@ const internal = ({ data, user, photo }) => {
           </>
      );
 };
-export default internal;
+export default Internal;
 
 export async function getServerSideProps({ params }) {
      const data = await fetchData(`${BaseURL}/posts/${params.id}`);

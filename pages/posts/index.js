@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import NotFound from '../../components/NotFound';
 
-const index = ({ posts }) => {
+const Index = ({ posts }) => {
      const router = useRouter();
      useEffect(() => {
           router.push('/posts');
@@ -46,7 +46,7 @@ const index = ({ posts }) => {
      );
 };
 
-export default index;
+export default Index;
 export async function getServerSideProps({ query }) {
      let posts;
      if (query.userId) {
