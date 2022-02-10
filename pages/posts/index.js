@@ -1,5 +1,5 @@
 import MyCard from '../../components/MyCard';
-import { fetchData } from '../../utils/fetchDAta';
+import { fetchData } from '../../utils/fetchData';
 import { BaseURL } from '../../utils/BaseURL';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
