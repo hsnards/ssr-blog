@@ -36,6 +36,7 @@ const Index = ({ posts }) => {
                               userId={item.userId}
                               body={item.body}
                               title={item.title}
+                              key={item.id}
                          />
                     )) : <NotFound />}
                     </div>
