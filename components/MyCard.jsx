@@ -23,9 +23,9 @@ const MyCard = ({ id, title, userId, body }) => {
                     </p>
                     <div className="w-full flex justify-end">
                          <Link href={`posts/${id}`} passHref>
-                              <button className="transition uppercase shadow bg-blue-50 hover:bg-blue-500 hover:text-white focus:shadow-outline focus:outline-none text-blue-500 text-xs   py-3 px-10 rounded">
+                              <motion.button whileTap={{scale:1.2}} className="transition uppercase shadow bg-blue-50 hover:bg-blue-500 hover:text-white focus:shadow-outline focus:outline-none text-blue-500 text-xs   py-3 px-10 rounded">
                                    بیشتر
-                              </button>
+                              </motion.button>
                          </Link>
                     </div>
                </motion.div>
