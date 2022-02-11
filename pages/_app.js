@@ -4,6 +4,7 @@ import NProgress from 'nprogress';
 import Router from 'next/router';
 
 function MyApp({ Component, pageProps }) {
+     NProgress.configure({showSpinner:false})
      Router.events.on('routeChangeStart', () => {
           NProgress.start();
      });
