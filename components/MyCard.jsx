@@ -1,8 +1,16 @@
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 const MyCard = ({ id, title, userId, body }) => {
+     const item = {
+          hidden: { y: 20, opacity: 0 },
+          visible: {
+            y: 0,
+            opacity: 1
+          }
+     };
      return (
           <>
-               <div className="w-96 flex-col flex border px-4 py-2 rounded-sm">
+               <motion.div variants={item} className="w-96 flex-col flex border px-4 py-2 rounded-sm">
                     <span className="text-gray-400 text-sm pb-2">
                          شماره: {id}{' '}
                     </span>
@@ -20,7 +28,7 @@ const MyCard = ({ id, title, userId, body }) => {
                               </button>
                          </Link>
                     </div>
-               </div>
+               </motion.div>
           </>
      );
 };
