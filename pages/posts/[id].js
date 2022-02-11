@@ -1,10 +1,11 @@
 import { fetchData } from '../../utils/fetchData';
 import { BaseURL } from '../../utils/BaseURL';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 const Internal = ({ data, user, photo }) => {
      return (
           <>
-               <div className="flex flex-col max-w-[600px] mx-auto  shadow rounded-md px-4 py-4 ">
+               <motion.div  whileTap={{scale: 1.2}} animate={{x:[1000,0]}} className="flex flex-col max-w-[600px] mx-auto  shadow rounded-md px-4 py-4 ">
                     <div className="w-full flex flex-wrap justify-between items-center ">
                          <h1 className="font-bold text-lg md:text-xl order-2 md:order-1">{data.title}</h1>
                          <div className="flex items-center justify-end md:justify-start w-full order-1  md:order-2 md:w-fit">
@@ -27,7 +28,7 @@ const Internal = ({ data, user, photo }) => {
                               {data.body}
                          </p>
                     </div>
-               </div>
+               </motion.div>
           </>
      );
 };
